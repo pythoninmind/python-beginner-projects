@@ -1,0 +1,12 @@
+{
+    "tasks": [
+        {
+            "id": 1,
+            "title": "Einkaufen",
+            "category": "Privat",
+            "priority": "High",
+            "deadline": "2026-08-05",
+            "done": false
+        }
+    ]
+}
