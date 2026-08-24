@@ -1,4 +1,3 @@
-Todo App in Python with GUI
 ![alt text](https://github.com/pythoninmind/python-beginner-projects/blob/main/todo%20app/todo%20app.png?raw=true)
 This code:
 Creates tasks
