@@ -1,4 +1,4 @@
-![Alternativtext](todo app.png)
+![](todo app.png)
 This code:
 Creates tasks
 Views tasks
