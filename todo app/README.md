@@ -1,8 +1,8 @@
-!(todo%20app.png)
+!(todo app.png)
 This code:
 Creates tasks
 Views tasks
-Deletes tasks
+Deletes tasks 
 Edits tasks
 Categories (e.g., Work, Personal, Study)
 Deadlines (date)
