@@ -1,3 +1,4 @@
+![Alternativtext](url-of-image "https://github.com/pythoninmind/python-beginner-projects/blob/main/todo%20app/todo%20app.png")
 This code:
 Creates tasks
 Views tasks
