@@ -1,3 +1,13 @@
+"""
+Core Skills Learned Here:
+• string module: Avoids typing out arrays of characters manually by using pre-built constants like string.ascii_letters or string.digits.
+• random.shuffle(): Randomizes the order of items inside a list in place.
+• "".join(list): Merges a list of individual string characters into one unified string block.
+
+further additions:
+• modify it to automatically export the password to a .txt file
+• to add a feature that checks and rates the password strength
+"""
 import random
 import string
 
