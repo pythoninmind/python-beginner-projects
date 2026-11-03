@@ -1,1 +1,1 @@
-Here you can find my python beginner projects. Have fun!
+Here you can find my python projects for beginners. Have fun!
