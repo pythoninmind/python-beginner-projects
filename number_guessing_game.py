@@ -1,3 +1,9 @@
+"""
+need to add:
+• Add a "Play Again" loop so you don't have to restart the script manually
+• Add a difficulty selector (Easy = 10 tries, Hard = 5 tries)
+• Create a score tracker to save your best highscore
+"""
 import random
 
 def number_guessing_game():
