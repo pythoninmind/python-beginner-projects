@@ -1,22 +1,24 @@
 import tkinter as tk
 from tkinter import font
+from logic import CalculatorLogic  # Importiert die Logik
 
-class Calculator(tk.Tk):
+class CalculatorGUI(tk.Tk):
     def __init__(self):
         super().__init__()
         self.title("Taschenrechner")
         self.geometry("300x400")
         self.configure(bg="#2e2e2e")
-        
-        # Aktiviert das responsive Layout (Fenstergröße veränderbar)
         self.resizable(True, True) 
+        
+        # Instanz der Logik-Klasse erstellen
+        self.logic = CalculatorLogic()
         
         self.custom_font = font.Font(family="Helvetica", size=18, weight="bold")
         self.result_var = tk.StringVar()
         self.create_widgets()
 
     def create_widgets(self):
-        # Display oben (Dark Theme)
+        # Display (Dark Theme)
         display = tk.Entry(
             self, 
             textvariable=self.result_var, 
@@ -37,7 +39,7 @@ class Calculator(tk.Tk):
             ["C"]
         ]
 
-        # Erstellt die Buttons (Responsive durch expand=True und fill=both)
+        # Buttons erstellen (Responsive)
         for row in buttons:
             frame = tk.Frame(self, bg="#2e2e2e")
             frame.pack(expand=True, fill="both")
@@ -50,24 +52,22 @@ class Calculator(tk.Tk):
                     fg="#ffffff", 
                     bd=0, 
                     relief="flat", 
-                    command=lambda txt=btn_text: self.on_click(txt)
+                    command=lambda txt=btn_text: self.on_button_click(txt)
                 )
                 btn.pack(side="left", expand=True, fill="both", padx=5, pady=5)
 
-    def on_click(self, char):
-        # Display leeren
+    def on_button_click(self, char):
+        # Leitet die Aktionen an die Logik-Klasse weiter
         if char == "C":
-            self.result_var.set("")
-        # Berechnung ausführen
+            new_text = self.logic.clear()
         elif char == "=":
-            try:
-                result = eval(self.result_var.get())
-                self.result_var.set(str(result))
-            except Exception:
-                # Fehlerbehandlung bei ungültigen Ausdrücken
-                self.result_var.set("Error")
-        # Zeichen anhängen
+            new_text = self.logic.evaluate()
         else:
-            current = self.result_var.get()
-            self.result_var.set(current + char)
+            # Falls vorher ein Error im Display stand, leeren wir es für die neue Eingabe
+            if self.result_var.get() == "Error":
+                self.logic.clear()
+            new_text = self.logic.append_char(char)
+            
+        # Aktualisiert die GUI-Anzeige
+        self.result_var.set(new_text)
 
