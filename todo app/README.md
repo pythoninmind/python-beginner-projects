@@ -1,7 +1,7 @@
 ![alt text](https://github.com/pythoninmind/python-beginner-projects/blob/main/todo%20app/todo%20app.png?raw=true)
+
 This code:
-Creates tasks
-Views tasks
+Creates tasks, Views tasks
 Deletes tasks 
 Edits tasks
 Categories (e.g., Work, Personal, Study)
