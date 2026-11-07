@@ -1,1 +1,1 @@
-
+This is a basic arithmetic calculator with a tkinter gui. When you start the program in the main function, a gui appears with a calculator where you can calculate numbers with basic arithmetic that means +,-,*,/.
